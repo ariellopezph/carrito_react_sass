@@ -1,12 +1,13 @@
 import React from "react";
 import { ProductsData } from "../../Data/ProductData";
+import styles from './styles.module.scss';
 
 
 const Products = () => {
     return (
-        <div>
+        <div className={styles.productsContainer}>
             {ProductsData.map((product, i) => (
-                <div key={i}>
+                <div key={i} className={styles.product}>
                     <img src={product.img} alt={product.name} />
                     <div>
                         <p>

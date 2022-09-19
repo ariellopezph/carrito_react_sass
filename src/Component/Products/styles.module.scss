@@ -1,0 +1,22 @@
+.productsContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    row-gap: 20px;
+    column-gap: 75px;
+    justify-items: center;
+    justify-content: center;
+}
+
+.product {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+    img {
+        width: 100%;
+    }
+}
