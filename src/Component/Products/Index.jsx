@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 import { ProductsData } from "../../Data/ProductData";
 import styles from './styles.module.scss';
 
 
+
 const Products = () => {
+    const {addItemToCart} = useContext(CartContext)
     return (
         <div className={styles.productsContainer}>
             {ProductsData.map((product, i) => (
@@ -14,7 +17,7 @@ const Products = () => {
                             {product.name} - ${product.price}
                         </p>
                     </div>
-                    <button onClick={() => console.log(product)}>Add to cart</button>
+                    <button onClick={() => addItemToCart(product)}>Add to cart</button>
                 </div>
 
             ))}
