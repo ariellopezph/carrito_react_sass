@@ -64,14 +64,14 @@ const Cart = () => {
             </div>
 
             {cartItems && cartOpen && (
-                <div>
+                <div className={styles.cart}>
                     <h2>Tu carrito</h2>
-                    {cartItems.length === 0 && <p>Tu carrito esta vacio</p>}
-                    <div>{cartItems.map((item, i) => (
+                    {cartItems.length === 0 && <p className={styles.cartVacio}>Tu carrito esta vacio</p>}
+                    <div className={styles.productsContainer}>{cartItems.map((item, i) => (
                         <ItemCart key={i} item={item} />
                     ))}
                     </div>
-                    <h2>Total: ${total}</h2>
+                    <h2 className={styles.total}>Total: ${total}</h2>
                 </div>
             )}
         </div>

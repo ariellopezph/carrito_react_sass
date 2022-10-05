@@ -10,6 +10,7 @@
         margin-right: 20px;
         cursor: pointer;
         z-index: 2;
+        
 
         svg {
             height: 25px;
@@ -42,4 +43,53 @@
 
         }
     }
+
+    .cart {
+        position: absolute;
+        margin-top: 10px;
+        margin-right: 20px;
+        border-radius: 30px;
+        width: 400px;
+        background-color: #222222;
+        color: white;
+
+        h2 {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 35px;
+        }
+
+        .cartVacio {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .total {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+            padding-bottom: 35px;
+        }
+
+        .productsContainer {
+            max-height: 200px;
+            overflow: scroll;
+            margin-top: 5px;
+        }
+    }
+
+
+}
+
+::-webkit-scrollbar{
+    -webkit-appearance: none;
+}
+::-webkit-scrollbar:vertical {
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
 }
